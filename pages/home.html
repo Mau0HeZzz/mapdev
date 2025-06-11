@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+	<load
+		src="src/html/_head.html"
+		title="Mapdev - созавайте интерактивные веб-карты"
+	/>
+	<body>
+		<div class="wrapper">
+      <load src="src/html/_header.html"/>
+			<main class="page">
+        <section class="hero">
+          <div class="hero__container">
+            <div class="hero__content">
+              <h1 class="hero__title">
+                Геосервисы 
+                для бизнеса
+                и&nbsp;органов власти
+              </h1>
+              <div class="hero__text">
+                <p>Создание карт, аналитика геоданных, обработка космоснимков с использованием искусственного интеллекта и алгоритмов компьютерного зрения</p>
+              </div>
+              <a href="#" class="hero__button btn btn-big btn-blue" data-popup="#callbackPopup">Напишите нам</a>
+            </div>
+            <div class="hero__media" data-da=".hero__content, 576, 2">
+              <div class="hero__backdrop"></div>
+              <div class="atropos my-atropos">
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <div class="hero__mediaitem" data-atropos-offset="0">
+                        <div class="hero__mediainner"
+                          style="
+                            --bgi-light: url(/img/hero_light_1.png);
+                            --bgi-dark: url(/img/hero_dark_1.png);
+                          "
+                        ></div>
+                      </div>
+                      <div class="hero__mediaitem" data-atropos-offset="2">
+                        <div class="hero__mediainner"
+                          style="
+                            --bgi-light: url(/img/hero_light_2.png);
+                            --bgi-dark: url(/img/hero_dark_2.png);
+                            --opacity: 0.2;
+                            --blur: 5px;
+                          "
+                        ></div>
+                      </div>
+                      <div class="hero__mediaitem" data-atropos-offset="4">
+                        <div class="hero__mediainner"
+                          style="
+                            --bgc: rgba(40, 102, 184, 0.2);
+                            --blur: 5px;
+                          "
+                        ></div>
+                      </div>
+                      <div class="hero__mediaitem" data-atropos-offset="6">
+                        <div class="hero__mediainner"
+                          style="
+                            --bgi-light: url(/img/hero_light_4.png);
+                            --bgi-dark: url(/img/hero_dark_4.png);
+                          "
+                        ></div>
+                      </div>
+                      <div class="hero__mediaitem" data-atropos-offset="8">
+                        <div class="hero__mediainner"
+                          style="
+                            --bgi-light: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(59, 128, 218, 0.2) 100%);
+                            --bgi-dark: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(59, 128, 218, 0.2) 100%);
+                          "
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="possibilities section" id="possibilities">
+          <div class="possibilities__container">
+            <div class="possibilities__head section-head">
+              <h2 class="possibilities__title section-title">
+                Возможности платформы <br>
+                под ваши задачи
+              </h2>
+            </div>
+            <div class="possibilities__body">
+              <div class="possibilities__filled">
+                <div>
+                  <p>На <q>15-50%</q> повышение оперативности принятия управленческих решений</p>
+                  <ul>
+                    <li><b>х2</b><span>ускорение подготовки отчетов, содержащих картографические данные.</span></li>
+                    <li><b>х3</b><span>ускорение поиска информации за счет упрощения коммуникации между сотрудниками</span></li>
+                    <li><b>х5</b><span>ускорение подготовки типовых отчетов</span></li>
+                  </ul>
+                  <p>На <q>15-50%</q> снижение рисков принятия ошибочных решений за счет обеспечения сотрудников единым источником актуальных пространственных данных</p>
+                </div>
+              </div>
+              <div class="possibilities__items">
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_1.svg" alt="Image"></i>
+                  <p>Визуализация растровых и векторных карт</p>
+                </div>
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_2.svg" alt="Image"></i>
+                  <p>Многопользова- тельский режим работы</p>
+                </div>
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_3.svg" alt="Image"></i>
+                  <p>Инструменты геоанализа и построения аналитических отчетов</p>
+                </div>
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_4.svg" alt="Image"></i>
+                  <p>Программный интерфейс (API) для интеграции в вашу систему</p>
+                </div>
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_5.svg" alt="Image"></i>
+                  <p>Поддержка местных систем координат регионов (обеспечивает работу по отечественным стандартам)</p>
+                </div>
+                <div class="possibilities__item">
+                  <i><img src="/img/possibilities_6.svg" alt="Image"></i>
+                  <p>Наличие всех стандартных функций и возможностей геоинформационной системы </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="areas section" id="areas">
+          <div class="areas__container">
+            <div class="areas__head section-head">
+              <h2 class="areas__title section-title">Области применения</h2>
+            </div>
+            <div class="areas__body">
+              <div class="areas__item">
+                <div class="areas__image">
+                  <picture>
+                    <source media="(prefers-color-scheme: light)" srcset="/img/areas_light_1.svg">
+                    <source media="(prefers-color-scheme: dark)" srcset="/img/areas_1.svg">
+                    <img src="/img/areas_light_1.svg" alt="areas_image_1">
+                  </picture>
+                </div>
+                <div class="areas__content">
+                  <div class="areas__itemtitle">Учет объектов недвижимости</div>
+                  <div class="areas__text">
+                    <p>Объединение семантической и геопространственной информации о земельных участках, водных объектах, объектах имущества и других позволяет достоверно понять какой объект, с какими характеристиками, где располагается, oценить их взаимное расположение</p>
+                  </div>
+                </div>
+              </div>
+              <div class="areas__item">
+                <div class="areas__image">
+                  <picture>
+                    <source media="(prefers-color-scheme: light)" srcset="/img/areas_light_2.svg">
+                    <source media="(prefers-color-scheme: dark)" srcset="/img/areas_2.svg">
+                    <img src="/img/areas_light_2.svg" alt="areas_image_2">
+                  </picture>
+                </div>
+                <div class="areas__content">
+                  <div class="areas__itemtitle">Управление городским и&nbsp;коммунальным хозяйством</div>
+                  <div class="areas__text">
+                    <p>Целостное представление об объектах инфраструктуры&nbsp;с&nbsp;привязкой к местности позволяет более эффективно решать задачи строительства и эксплуатации</p>
+                  </div>
+                </div>
+              </div>
+              <div class="areas__item">
+                <div class="areas__image">
+                  <picture>
+                    <source media="(prefers-color-scheme: light)" srcset="/img/areas_light_3.svg">
+                    <source media="(prefers-color-scheme: dark)" srcset="/img/areas_3.svg">
+                    <img src="/img/areas_light_3.svg" alt="areas_image_3">
+                  </picture>
+                </div>
+                <div class="areas__content">
+                  <div class="areas__itemtitle">Экология и природопользование</div>
+                  <div class="areas__text">
+                    <p>Создание интерактивных тематических карт. Возможность учета изменений объектов и отслеживания динамики процессов по данным полевых обследований позволяет поддерживать карты в актуальном состоянии</p>
+                  </div>
+                </div>
+              </div>
+              <div class="areas__item">
+                <div class="areas__image">
+                  <picture>
+                    <source media="(prefers-color-scheme: light)" srcset="/img/areas_light_4.svg">
+                    <source media="(prefers-color-scheme: dark)" srcset="/img/areas_4.svg">
+                    <img src="/img/areas_light_4.svg" alt="areas_image_4">
+                  </picture>
+                </div>
+                <div class="areas__content">
+                  <div class="areas__itemtitle">Управление агропромышленным комплексом</div>
+                  <div class="areas__text">
+                    <p>Сведения о границах полей, о произрастающих культурах, исторических данных урожайности - основа для эффективного и рационального использования земель</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="important section" id="important">
+          <div class="important__container">
+            <div class="important__head section-head">
+              <h2 class="important__title section-title">Все важное - учтено</h2>
+            </div>
+            <div class="important__body">
+              <div class="important__item">
+                <div class="important__icon"><img src="/img/important_1.svg" alt="important_1"></div>
+                <div class="important__text">
+                  <h3>Экономия ресурсов</h3>
+                  <p>Работает в браузере на мобильном устройстве и ПК, не требует установки специального программного обеспечения</p>
+                </div>
+              </div>
+              <div class="important__item">
+                <div class="important__icon"><img src="/img/important_2.svg" alt="important_2"></div>
+                <div class="important__text">
+                  <h3>Основано на Open Source </h3>
+                  <p>Стабильность работы и техподдержка в условиях импортозамещения и санкций обеспечены за счет использования программного кода открытого распространения</p>
+                </div>
+              </div>
+              <div class="important__item">
+                <div class="important__icon"><img src="/img/important_3.svg" alt="important_3"></div>
+                <div class="important__text">
+                  <h3>Легкое внедрение</h3>
+                  <p>Не требуется отдельного и специального обучения пользователей</p>
+                </div>
+              </div>
+              <div class="important__item">
+                <div class="important__icon"><img src="/img/important_4.svg" alt="important_4"></div>
+                <div class="important__text">
+                  <h3>Облачное хранилище</h3>
+                  <p>Возможность хранения данных как в облаке, так и на собственных серверах</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="examples section" id="examples">
+          <div class="examples__container">
+            <div class="examples__head section-head">
+              <h2 class="examples__title section-title">Примеры проектов</h2>
+            </div>
+            <div class="examples__body">
+              <div class="examples__item" data-popup="#examplesPopup" data-src="https://hub.mapdev.io/resource/2442/display" data-content="<b>Цель</b><p>Поддержка развития производства органической продукции и повышение экологичности сельскохозяйственного производства</p><b>Решенные задачи</b><ul><li>Собрана информация от различных ведомств (о загрязнении почв, промышленных объектах, объектах транспортной инфраструктуры, опасных селскохозяйственных производствах и т.д.)</li><li>Методами пространственного анализа определены оптимальные места размещения объектов предназначенных для ведения органического сельского хозяйства</li><li>Создан реестр производителей органической продукции, а также хозяйств, которые находятся в переходном периоде</li></ul><b>Результат работ</b><p>Методическое обеспечение производителей органической продукции информацией о потенциально опасных для загрязнения почвы объектах</p>">
+                <div class="_lights"></div>
+                <div class="examples__image"><img src="/img/examples_1.png" alt="examples_1"></div>
+                <div class="examples__content">
+                  <div class="examples__itemtitle">Агроэкологическая карта Воронежской области</div>
+                  <div class="examples__text">
+                    <p>Методическое обеспечение производителей органической продукции информацией о потенциально опасных для загрязнения почвы объектах</p>
+                  </div>
+                  <div class="examples__link">Подробнее о проекте</div>
+                </div>
+              </div>
+              <div class="examples__item" data-popup="#examplesPopup" data-src="https://hub.mapdev.io/resource/3994/display" data-content="<p>Кто нибудь объясните мне нахера в макете тут кастомный скролл</p><p>Если для того чтоб модалка помещалась в экран по высоте так она с такими размерами не поместится</p><p>Если для понта так это:</p><ul><li>Во-первых неудобно на десктопе ибо нужно скроллить основной контейнер с модалкой чтоб дойти до текста и скроллит этот крошечный блок с текстом чтоб его прочитать</li><li>Во-вторых неудобно на мобилке ибо при попытке скролла всей модалки будет скроллиться этот крошечный контейнер с текстом</li></ul>">
+                <div class="examples__image"><img src="/img/examples_2.png" alt="examples_2"></div>
+                <div class="examples__content">
+                  <div class="examples__itemtitle">Интегрированный искусственный интеллект (ИИ)</div>
+                  <div class="examples__text">
+                    <p>Создан сервис ИИ-распознавания, позволяющий автоматически получать векторные слои границ интересующих объектов с атрибутами</p>
+                  </div>
+                  <div class="examples__link">Подробнее о проекте</div>
+                </div>
+              </div>
+              <div class="examples__item" data-popup="#examplesPopup" data-src="https://hub.mapdev.io/resource/1/display" data-content="<p>Кто нибудь объясните мне нахера в макете тут кастомный скролл</p><p>Если для того чтоб модалка помещалась в экран по высоте так она с такими размерами не поместится</p><p>Если для понта так это:</p><ul><li>Во-первых неудобно на десктопе ибо нужно скроллить основной контейнер с модалкой чтоб дойти до текста и скроллит этот крошечный блок с текстом чтоб его прочитать</li><li>Во-вторых неудобно на мобилке ибо при попытке скролла всей модалки будет скроллиться этот крошечный контейнер с текстом</li></ul>">
+                <div class="_lights"></div>
+                <div class="examples__image"><img src="/img/examples_3.png" alt="examples_3"></div>
+                <div class="examples__content">
+                  <div class="examples__itemtitle">Карта возраста домов Воронежа</div>
+                  <div class="examples__text">
+                    <p>Визуализация информации о зданиях в нашем городе, чтобы отслеживать процесс застройки с точки зрения некоторых исторических периодов.</p>
+                  </div>
+                  <div class="examples__link">Подробнее о проекте</div>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="examples__button btn btn-big">Показать еще проекты</a>
+          </div>
+        </section>
+        <section class="partners section" id="partners">
+          <div class="partners__container">
+            <div class="partners__head section-head">
+              <h2 class="partners__title section-title">Клиенты и партнёры</h2>
+            </div>
+            <div class="partners__body">
+              <div class="_lights"></div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 0;">
+                <img src="/img/partners_1.png" alt="partners_1">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 6;">
+                <img src="/img/partners_2.png" alt="partners_2">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 2;">
+                <img src="/img/partners_3.png" alt="partners_3">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 1;">
+                <img src="/img/partners_4.png" alt="partners_4">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 3;">
+                <img src="/img/partners_5.png" alt="partners_5">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 4;">
+                <img src="/img/partners_6.png" alt="partners_6">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 9;">
+                <img src="/img/partners_7.png" alt="partners_7">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 5;">
+                <img src="/img/partners_8.png" alt="partners_8">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 7;">
+                <img src="/img/partners_9.png" alt="partners_9">
+              </div>
+              <div class="partners__item" style="--order: 0; --order-mobile: 8;">
+                <img src="/img/partners_10.png" alt="partners_10">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="callback section" id="callback">
+          <div class="callback__container">
+            <div class="popup__content callbackPopup__content callback__content">
+              <div class="popup__body callbackPopup__body">
+                <div class="popup__title callbackPopup__title">Напишите нам по любому вопросу, предложению или задаче</div>
+                <!-- Для отправки аяксом на формк должен быть атрибут data-ajax
+                В атрибут data-popup-success пишем ид модалки, которую нужно показать при успешном запросе(200)
+                В атрибут data-popup-error пишем ид модалки, которую нужно показать при неуспешном запросе(не 200)
+                В атрибут data-popup-timeout пишем таймаут в мс через которое модалка успеха/неуспеха сама закроется, если не указан то по умолчанию 1500(полторы секунды) 
+                Все атрибуты data-dev с форм нужно либо убрать либо заменить на data-ajax -->
+                <form 
+                  action="#" 
+                  class="callbackPopup__form form" 
+                  data-dev 
+                  data-popup-success="#successPopup" 
+                  data-popup-error="#errorPopup"
+                  data-popup-timeout="2000"
+                >
+                  <div class="form__item">
+                    <input type="text" data-required data-error="это обязательное поле">
+                    <label>Имя</label>
+                  </div>
+                  <div class="form__item">
+                    <input type="text" data-required data-error="это обязательное поле" data-inputmask="'alias':'email'">
+                    <label>E-mail</label>
+                  </div>
+                  <div class="form__item">
+                    <textarea data-required data-error="это обязательное поле"></textarea>
+                    <label>Сообщение</label>
+                  </div>
+                  <div class="form__footer">
+                    <button type="submit" class="form__button btn btn-big btn-white">Отправить</button>
+                    <div class="form__footext">
+                      Нажимая на кнопку, вы даете согласие на обработку своих <a href="#" data-popup="#politicPopup">персональных данных</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+			</main>
+      <load src="src/html/_footer.html"/>
+		</div>
+    <load src="src/html/_popup.html"/>
+    <load src="src/html/_js.html"/>
+	</body>
+</html>

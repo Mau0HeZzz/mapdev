@@ -1,0 +1,162 @@
+<div id="callbackPopup" aria-hidden="true" class="popup callbackPopup">
+	<div class="popup__wrapper">
+		<div class="popup__content callbackPopup__content">
+      <div class="popup__dragclose" data-dragclose=""></div>
+			<button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="#D2E0F3"/>
+        </svg>
+      </button>
+      <div class="popup__body callbackPopup__body">
+        <div class="popup__title callbackPopup__title">Напишите нам по любому вопросу, предложению или задаче</div>
+        <!-- Для отправки аяксом на формк должен быть атрибут data-ajax
+        В атрибут data-popup-success пишем ид модалки, которую нужно показать при успешном запросе(200)
+        В атрибут data-popup-error пишем ид модалки, которую нужно показать при неуспешном запросе(не 200)
+        В атрибут data-popup-timeout пишем таймаут в мс через которое модалка успеха/неуспеха сама закроется, если не указан то по умолчанию 1500(полторы секунды) 
+        Все атрибуты data-dev с форм нужно либо убрать либо заменить на data-ajax -->
+        <form 
+          action="#" 
+          class="callbackPopup__form form" 
+          data-dev 
+          data-popup-success="#successPopup" 
+          data-popup-error="#errorPopup"
+          data-popup-timeout="2000"
+        >
+          <div class="form__item">
+            <input type="text" data-required data-error="это обязательное поле">
+            <label>Имя</label>
+          </div>
+          <div class="form__item">
+            <input type="text" data-required data-error="это обязательное поле" data-inputmask="'alias':'email'">
+            <label>E-mail</label>
+          </div>
+          <div class="form__item">
+            <textarea data-required data-error="это обязательное поле"></textarea>
+            <label>Сообщение</label>
+          </div>
+          <div class="form__footer">
+            <button type="submit" class="form__button btn btn-big btn-white">Отправить</button>
+            <div class="form__footext">
+              Нажимая на кнопку, вы даете согласие на обработку своих <a href="#" data-popup="#politicPopup">персональных данных</a>
+            </div>
+          </div>
+        </form>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div id="examplesPopup" aria-hidden="true" class="popup examplesPopup" data-nohash>
+	<div class="popup__wrapper">
+		<div class="popup__content examplesPopup__content">
+      <div class="popup__dragclose" data-dragclose=""></div>
+			<button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="#D2E0F3"/>
+        </svg>
+      </button>
+      <div class="popup__body examplesPopup__body">
+        <div class="examplesPopup__title">title</div>
+        <div class="examplesPopup__frame _skeleton">
+          <iframe src="" frameborder="0" onload="this.parentElement.classList.remove('_skeleton')"></iframe>
+        </div>
+        <div class="examplesPopup__text _content">
+          <p>Кто нибудь объясните мне нахера в макете тут кастомный скролл</p><p>Если для того чтоб модалка помещалась в экран по высоте так она с такими назмерами не поместится</p><p>Если для понта так это:</p><ul><li>Во-первых неудобно на десктопе ибо нужно скроллить основной контейнер с модалкой чтоб дойти до текста и скроллит этот крошечный блок с текстом чтоб его прочитать</li><li>Во-вторых неудобно на мобилке ибо при попытке скролла всей модалки будет скроллиться этот крошечный контейнер с текстом</li></ul>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div id="politicPopup" aria-hidden="true" class="popup examplesPopup">
+	<div class="popup__wrapper">
+		<div class="popup__content examplesPopup__content">
+      <div class="popup__dragclose" data-dragclose=""></div>
+			<button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="#D2E0F3"/>
+        </svg>
+      </button>
+      <div class="popup__body examplesPopup__body">
+        <div class="examplesPopup__title">Политика конфиденциальности</div>
+        <div class="examplesPopup__text _content">
+          <p>Меня никто об этом не просил, но я всё равно сделал</p>
+          <p>Сюда можно писать политику конфиденциальности</p>
+
+          <ul>
+            <li>Пример</li>
+            <li>Ненумерованного</li>
+            <li>Списка</li>
+          </ul>
+          <ol>
+            <li>Пример</li>
+            <li>Нумерованного</li>
+            <li>Списка</li>
+          </ol>
+
+          <blockquote>Пример цитаты</blockquote>
+
+          <b>Пример жирного(как я) текст</b>
+          <i>Пример наклонного текста</i>
+          <u>Пример подчёркнутого текста</u>
+
+          <del>Пример зачёркнутого текста</del>
+
+          <h1>Заголовок первого уровня</h1>
+          <h2>Заголовок второго уровня</h2>
+          <h3>Заголовок третьего уровня</h3>
+          <h4>Заголовок четвертого уровня</h4>
+          <h5>Заголовок пятого уровня</h5>
+          <h6>Заголовок шестого уровня</h6>
+        </div>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div id="successPopup" aria-hidden="true" class="popup messagePopup" data-nohash>
+	<div class="popup__wrapper">
+		<div class="popup__content messagePopup__content">
+      <div class="popup__dragclose" data-dragclose=""></div>
+			<button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="#D2E0F3"/>
+        </svg>
+      </button>
+      <div class="popup__body messagePopup__body">
+        <i>
+          <svg width="59" height="48" viewBox="0 0 59 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.898438 27.6984L9.99844 18.4984L20.5984 29.1984L48.9984 0.398438L58.0984 9.59844L20.5984 47.5984L0.898438 27.6984ZM5.09844 27.6984L20.5984 43.2984L53.8984 9.69844L48.9984 4.69844L20.5984 33.2984L10.0984 22.7984L5.09844 27.6984Z" fill="#418FF7"/>
+          </svg>
+        </i>
+        <p>
+          Данные успешно отправлены!
+        </p>
+      </div>
+		</div>
+	</div>
+</div>
+
+<div id="errorPopup" aria-hidden="true" class="popup messagePopup" data-nohash>
+	<div class="popup__wrapper">
+		<div class="popup__content messagePopup__content">
+      <div class="popup__dragclose" data-dragclose=""></div>
+			<button data-close type="button" class="popup__close">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.6 16L0 14.4L6.4 8L0 1.6L1.6 0L8 6.4L14.4 0L16 1.6L9.6 8L16 14.4L14.4 16L8 9.6L1.6 16Z" fill="#D2E0F3"/>
+        </svg>
+      </button>
+      <div class="popup__body messagePopup__body">
+        <i>
+          <svg width="38" height="48" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 48V0H24.6L38 13.4V48H0ZM3 45H35V14.6L23.4 3H3V45ZM12.4 31.2L16.9 26.5L12.4 22L14.5 19.9L19 24.4L23.5 19.9L25.6 22L21.1 26.5L25.6 31L23.5 33.1L19 28.6L14.5 33.3L12.4 31.2Z" fill="#418FF7"/>
+          </svg>
+        </i>
+        <p>
+          Что-то пошло не так.
+        </p>
+        <span>Пожалуйста, попробуйте еще&nbsp;раз позже.</span>
+      </div>
+		</div>
+	</div>
+</div>

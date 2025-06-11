@@ -1,0 +1,167 @@
+@use "/src/scss/base/mixins.scss";
+@use "/src/scss/variables.scss";
+@use "sass:math";
+
+.footer {
+  background-color: var(--module);
+  position: relative;
+  z-index: 3;
+
+  &__container {
+    @include mixins.adaptiveValue("padding-top", 50, 10, 1200, 360);
+    @include mixins.adaptiveValue("padding-bottom", 50, 10, 1200, 360);
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: mixins.toRem(30);
+
+    // &:not(:last-child) {
+    //   @include mixins.adaptiveValue("margin-bottom", 50, 30, 767, 360);
+    // }
+
+    &:not(:last-child) {margin-bottom: mixins.toRem(30);}
+
+    @media (max-width: mixins.toEm(450)){
+      flex-direction: column;
+    }
+  }
+
+  &__logo {
+    svg, img, picture {
+      @include mixins.adaptiveValue("max-width", 130, 97, 1200, 767);
+      @include mixins.adaptiveValue("max-height", 40, 30, 1200, 767);
+    }
+  }
+
+  &__menu {
+    li {
+      width: max-content;
+    }
+    a {
+      padding: mixins.toRem(5) mixins.toRem(10);
+      font-weight: 500;
+      font-size: mixins.toRem(15);
+      line-height: math.div(20 , 15);
+      .loaded & {
+        transition: color 0.3s ease 0s;
+      }
+
+      @media (any-hover: hover){
+        &:hover{
+          color: var(--heading);
+        }
+      }
+    }
+    @media (min-width:mixins.toEm(580)){
+      display: flex;
+      flex-wrap: wrap;
+    }
+    @media (max-width: mixins.toEm(580)){
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        max-width: mixins.toRem(160);
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: mixins.toRem(24);
+    @include mixins.adaptiveValue("font-size", 16, 14, 1200, 1024);
+
+    @media (max-width: mixins.toEm(580)){
+      flex-direction: column-reverse;
+    }
+    @media (max-width: mixins.toEm(580)) and (min-width: mixins.toEm(450)) {
+      position: relative;
+    }
+  }
+
+  &__info {
+    color: var(--secondary-text);
+    font-weight: 500;
+
+    > * {
+      &:not(:last-child) {margin-bottom: mixins.toRem(4);}
+
+      &:first-child{
+        &:not(:last-child) {margin-bottom: mixins.toRem(20);}
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.adaptiveValue("gap", 16, 10, 576, 360);
+
+    a {
+      color: var(--acent-1);
+      font-weight: 500;
+      white-space: nowrap;
+
+      &[href] {
+        @media (any-hover: hover){
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__up {
+    width: mixins.toRem(60);
+    height: mixins.toRem(60);
+    flex: 0 0 mixins.toRem(60);
+    border-radius: 50%;
+    background-color: var(--up);
+    display: flex;
+    justify-content:center;align-items: center;
+    cursor: pointer;
+
+    .loaded & {
+      transition: background-color 0.3s ease 0s;
+    }
+
+    @media (any-hover: hover){
+      &:hover{
+        background-color: var(--secondary-text);
+      }
+    }
+
+    &:active {
+      &, * {
+        transition: all 0s ease 0s;
+      }
+
+      background-color: var(--heading);
+
+      path {
+        fill: var(--secondary-text);
+      }
+    }
+
+    @media (max-width: mixins.toEm(580)){
+      position: absolute;
+      top: mixins.toRem(-19.5);
+      right: 0;
+    }
+
+    @media (max-width: mixins.toEm(450)){
+      top: mixins.toRem(-30);
+      right: mixins.toRem(15);
+    }
+
+    path {
+      fill: var(--main-text);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// ===============
+// colors palette
+// ===============
+:root {
+  --bg: light-dark(#F1F4F8 ,#1E1F24);
+  --bg-opacity: light-dark(rgba(241, 244, 248, 0.5) ,rgba(30, 31, 36, 0.5));
+  --module: light-dark(#D2E2F8 ,#30333B);
+  --acent-1: light-dark(#2A86FF ,#2677E3);
+  --acent-2: light-dark(#4D9AFF ,#418FF7);
+  --heading: light-dark(#1E1F24 ,#FFFFFF);
+  --main-text: light-dark(#363841 ,#D2D2D2);
+  --secondary-text: light-dark(#738294 ,#738294);
+  --up: light-dark(#A2B2C6, #515A67);
+  
+  --blue-text: #D2E0F3;
+  --modal_bg: var(--bg-opacity);
+  --error: #ED7070;
+  --white: #fff;
+  --lights: radial-gradient(circle, rgba(38, 119, 227, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+}
