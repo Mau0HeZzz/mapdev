@@ -770,40 +770,62 @@ export function setBodyHeightsVars(headerSelector='.header', footerSelector = '.
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector(headerSelector);
     const footer = document.querySelector(footerSelector);
+    const bxPanel = document.querySelector('#bx-panel');
     if (header) {
       const headerHeight = header.offsetHeight;
       document.body.style.setProperty('--headerHeight', `${headerHeight}px`);
+    }
+    if (bxPanel) {
+      const panelHeight = bxPanel.offsetHeight;
+      document.body.style.setProperty('--panelHeight', `${panelHeight}px`);
     }
     if (footer) {
       const footerHeight = footer.offsetHeight;
       document.body.style.setProperty('--footerHeight', `${footerHeight}px`);
     }
 
-    window.addEventListener('resize', () => {
-      if (header) {
-        const headerHeight = header.offsetHeight;
-        document.body.style.setProperty('--headerHeight', `${headerHeight}px`);
-        setTimeout(() => {
+    setInterval(() => {
+      requestAnimationFrame(() => {
+        if (header) {
           const headerHeight = header.offsetHeight;
           document.body.style.setProperty('--headerHeight', `${headerHeight}px`);
-        }, 200);
-      }
-      if (footer) {
-        const footerHeight = footer.offsetHeight;
-        document.body.style.setProperty('--footerHeight', `${footerHeight}px`);
-      }
-    })
+        }
+        if (bxPanel) {
+          const panelHeight = bxPanel.offsetHeight;
+          document.body.style.setProperty('--panelHeight', `${panelHeight}px`);
+        }
+        if (footer) {
+          const footerHeight = footer.offsetHeight;
+          document.body.style.setProperty('--footerHeight', `${footerHeight}px`);
+        }
+      })
+    }, 500);
 
-    window.addEventListener('scroll', ()=>{
-      if (header) {
-        const headerHeight = header.offsetHeight;
-        document.body.style.setProperty('--headerScrollHeight', `${headerHeight}px`);
-      }
-      if (footer) {
-        const footerHeight = footer.offsetHeight;
-        document.body.style.setProperty('--footerScrollHeight', `${footerHeight}px`);
-      }
-    })
+    // window.addEventListener('resize', () => {
+    //   if (header) {
+    //     const headerHeight = header.offsetHeight;
+    //     document.body.style.setProperty('--headerHeight', `${headerHeight}px`);
+    //     setTimeout(() => {
+    //       const headerHeight = header.offsetHeight;
+    //       document.body.style.setProperty('--headerHeight', `${headerHeight}px`);
+    //     }, 200);
+    //   }
+    //   if (footer) {
+    //     const footerHeight = footer.offsetHeight;
+    //     document.body.style.setProperty('--footerHeight', `${footerHeight}px`);
+    //   }
+    // })
+
+    // window.addEventListener('scroll', ()=>{
+    //   if (header) {
+    //     const headerHeight = header.offsetHeight;
+    //     document.body.style.setProperty('--headerScrollHeight', `${headerHeight}px`);
+    //   }
+    //   if (footer) {
+    //     const footerHeight = footer.offsetHeight;
+    //     document.body.style.setProperty('--footerScrollHeight', `${footerHeight}px`);
+    //   }
+    // })
   })
 }
 export function wrap(el, tagName = 'div',  className = 'wrapper', dopHTML = null, dopHTMLPlacement='beforeend') {

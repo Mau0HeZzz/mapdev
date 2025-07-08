@@ -1,4 +1,5 @@
 // Подключение функционала "Чертоги Фрилансера"
+import { formValidate } from "./forms/forms.js";
 import { debounce, isMobile, menuClose } from "./functions.js";
 // Подключение списка активных модулей
 import { mhzModules } from "./modules.js";
@@ -15,6 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         item.classList.add('_reversed');
       }
     })
+  }
+
+  const forms = document.querySelectorAll('form');
+  for (let index = 0; index < forms.length; index++) {
+    const form = forms[index];
+    momentValidate(form);
   }
 })
 
@@ -88,3 +95,33 @@ function onExamplesOpen(popup) {
     popupFrameEl.innerHTML = str;
   }
 }
+
+function momentValidate(form) {
+  const submit = form.querySelector('[type="submit"]');
+  if (!submit) return;
+
+  form.addEventListener('input', () => {
+    momentValidateSetDisabled(form, submit);
+  })
+  form.addEventListener('change', () => {
+    momentValidateSetDisabled(form, submit);
+  })
+  form.addEventListener('focusin', () => {
+    momentValidateSetDisabled(form, submit);
+  })
+  form.addEventListener('focusout', () => {
+    momentValidateSetDisabled(form, submit);
+  })
+}
+
+function momentValidateSetDisabled(form, submit) {
+  const errors = formValidate.getErrors(form);
+
+  if (errors > 0) {
+    submit.setAttribute('disabled', '');
+  } else {
+    submit.removeAttribute('disabled');
+  }
+}
+
+window.mhzModules = mhzModules;

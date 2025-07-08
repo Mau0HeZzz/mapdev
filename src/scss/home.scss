@@ -103,7 +103,7 @@
       padding-left: var(--left, 0px);
       margin-left: calc(var(--left, 0px) * -1);
       height: 200%;
-      max-height: calc(100dvh - var(--headerHeight));
+      max-height: calc(100dvh - var(--headerHeight) - var(--panelHeight, 0px));
       z-index: 3;
       &-inner {
         overflow: visible;

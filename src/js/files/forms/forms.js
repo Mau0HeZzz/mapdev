@@ -75,7 +75,7 @@ export function formFieldsInit(options = { viewPass: false }) {
 export let formValidate = {
 	getErrors(form) {
 		let error = 0;
-		let formRequiredItems = form.querySelectorAll('*[data-required]');
+		let formRequiredItems = form.querySelectorAll('[data-required], [required]');
 		if (formRequiredItems.length) {
 			formRequiredItems.forEach(formRequiredItem => {
 				if ((formRequiredItem.offsetParent !== null || formRequiredItem.tagName === "SELECT") && !formRequiredItem.disabled) {

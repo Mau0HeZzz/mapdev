@@ -185,6 +185,11 @@ img {
     --actbgc: var(--acent-2);
     --actcolor: light-dark(var(--bg), var(--heading));
   }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 .form {
@@ -319,9 +324,10 @@ img {
 }
 
 ._lights {
+  pointer-events: none;
   aspect-ratio: 1;
   width: mixins.percent(749,520);
-  background-image: url(/img/lights.svg);
+  background-image: url(../img/lights.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
